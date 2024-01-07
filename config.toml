@@ -4,7 +4,7 @@ title = "weeeblog"
 theme = ["hugo-whiteglass", "hugo-cite"]
 
 # Used under RSS
-copyright = "&copy; Nikhil Verma"
+#copyright = "&copy; Anirudha Agrawal"
 
 # Number of items to show every page
 paginate = 20
@@ -50,8 +50,8 @@ disableKinds = ["taxonomy"]
 
 # Used under every post and in RSS.
 [author]
-  name = "Nikhil Verma"
-  email = "nikhilweee@gmail.com"
+  name = "Anirudha Agrawal"
+  email = "anirudha0807@gmail.com"
   url = "/"
 
 [markup]
