@@ -28,17 +28,7 @@ Before UCSD, I was a Machine Learning Engineer at [Sahaj.ai](https://www.sahaj.a
 I graduated from [RCOEM](https://www.rknec.edu/) with a B.E in Computer Science. For more information, you can go through a list of my [projects](/projects), or have a look at my [resume](/resume). Feel free to reach out to me using your preferred platform. 
 
 
-<!-- ## Publications
----
-{{<spanright>}}[[Abstract]](https://aclanthology.org/2020.emnlp-main.589/){{</spanright>}}
-**Neural Conversational QA: Learning to Reason vs Exploiting Patterns**  
-_**Nikhil Verma**, Abhishek Sharma, Dhiraj Madan, Danish Contractor, Harshit Kumar, Sachindra Joshi_  
-Paper published at EMNLP 2020
 
-{{<spanright>}}[[US 16/892805]](https://patents.google.com/patent/US20210383077A1/en){{</spanright>}}
-**Generating Dialog System Workspaces**  
-_Danish Contractor, **Nikhil Verma**, Harshit Kumar and Sachindra Joshi_  
-Patent filed with the US Patent and Trademark Office -->
 
 ## Open Source
 ---
