@@ -1,6 +1,6 @@
-baseURL = "https://nikhilweee.me"
+baseURL = "https://anirudha.info"
 languageCode = "en-us"
-title = "weeeblog"
+title = "anirudharesume"
 theme = ["hugo-whiteglass", "hugo-cite"]
 
 # Used under RSS

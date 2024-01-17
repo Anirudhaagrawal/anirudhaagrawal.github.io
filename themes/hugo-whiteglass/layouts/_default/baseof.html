@@ -1,0 +1,16 @@
+<!DOCTYPE html> {{ "<!-- begin: layouts/_default/baseof.html -->" | safeHTML }}
+<html lang="en">
+  {{ partial "head" . }}
+  <body class="flex-parent">
+    <div class="sidebar sidebar-left"></div>
+    <main class="flex-content">
+      {{ partial "header" . }}
+      <div class="page-content wrapper">
+        {{- block "main" . -}} {{- .Content -}} {{- end -}}
+      </div>
+    </main>
+    <div class="sidebar sidebar-right">{{ partial "sidebar" . }}</div>
+  </body>
+  {{ partial "scripts" . }} {{ "<!-- end: layouts/_default/baseof.html -->" |
+  safeHTML }}
+</html>

@@ -1,0 +1,45 @@
+@charset "utf-8";
+// Import partials from the `whiteglass` theme
+@import "whiteglass";
+
+
+/**
+ * Debug
+ */
+
+// *:hover {
+//   outline:1px $grey-color dashed;
+// }
+
+
+/**
+ * Dark Mode
+ */
+.dark {
+  background-color: darken($background-white, 90%);
+  filter: invert(95%) hue-rotate(180deg);
+
+  .post-content {
+    border-color: invert($grey-color);
+  }
+
+  blockquote, .footnotes, .post-meta {
+    filter: brightness(0.85);
+  }
+
+  iframe, img, video, hr {
+    filter: invert(95%) hue-rotate(-180deg);
+  }
+
+  .highlight, pre, code{
+    background-color: darken($background-white, 20%);
+  }
+}
+
+body.dark #moon {
+  display: none;
+}
+
+body:not(.dark) #sun {
+  display: none;
+}

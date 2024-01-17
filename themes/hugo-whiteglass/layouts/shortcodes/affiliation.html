@@ -1,0 +1,10 @@
+<!-- begin: shortcodes/affiliation.html -->
+<div style="display: inline-block; padding: 0.5em 1em; vertical-align: top;">
+    <a href='{{- .Get "href" -}}'>
+        <img style="max-width: 5rem; padding: 1rem;" src='{{- .Get "img" -}}'>
+    </a>
+    <p style="text-align: center; font-size: 0.8em;">
+        {{- .Get "name" | markdownify -}}<br>{{- .Get "desc" | markdownify -}}
+    </p>
+</div>
+<!-- end: shortcodes/affiliation.html -->

@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{"<!-- begin: layouts/_default/single.html -->" | safeHTML }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+        <p class="post-subtitle" itemprop="abstract description">{{ .Params.subtitle }}</p>
+        <p class="post-meta">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a href="{{ .Site.Author.url }}"><span itemprop="name">{{ .Site.Author.name }}</span></a></span>{{ " • " }}
+            <time datetime="{{ .Date }}" itemprop="datePublished">Published {{ .PublishDate.Format "Jan 02, 2006" }}</time>{{ " • " }}
+            {{ if ne .PublishDate .Lastmod }}
+            <time datetime="{{ .Date }}" itemprop="datePublished">Updated {{ .Lastmod.Format "Jan 02, 2006" }}</time>{{ " • " }}
+            {{ end }}
+            {{- range $index, $category := .Params.categories -}}
+                {{ if ne $index 0 }}
+                    {{ " • " }}
+                {{ end }}
+                {{ with $.Site.GetPage ( . | urlize ) }}
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ end }}
+            {{- end -}}
+        </p>
+    </header>
+
+        <div class="post-content" itemprop="articleBody">
+            {{ .Content }}
+        </div>
+
+    </article>
+    {{"<!-- end: layouts/_default/single.html -->" | safeHTML }}
+    {{ end }}

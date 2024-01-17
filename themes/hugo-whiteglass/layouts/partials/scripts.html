@@ -1,0 +1,58 @@
+<!-- Dark Mode -->
+<script type="text/javascript">
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+            changeGiscusTheme();
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+            changeGiscusTheme();
+        }
+    })
+
+    function changeGiscusTheme() {
+        let theme = localStorage.getItem("pref-theme");
+        let message = { setConfig: { theme: theme } };
+        let iframe = document.querySelector('iframe.giscus-frame');
+        if (iframe) {
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+    }
+
+    if ((localStorage.getItem("pref-theme") != "light") 
+        && (window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.getElementById("theme-toggle").click();
+    }
+
+    function handleMessage(event) {
+        if (event.origin !== 'https://giscus.app') return;
+        if (!(typeof event.data === 'object' && event.data.giscus)) return;
+        const giscusData = event.data.giscus;
+        changeGiscusTheme();
+    }
+      
+    window.addEventListener('message', handleMessage);
+
+</script>
+
+{{ if not hugo.IsProduction }}
+    <script>
+        let p = document.querySelector('.site-footer .wrapper p');
+        p.innerHTML = window.screen.width + ' * ' + window.screen.height + "<br />" + p.innerHTML;
+    </script>
+{{ end }}
+
+{{ if .Site.GoogleAnalytics }}
+    {{ template "_internal/google_analytics.html" . }}
+{{ end }}
+
+{{ if and (eq .Section "blog") (.IsPage) (ne .Params.comments false) }}
+    <script src="https://giscus.app/client.js" data-repo="nikhilweee/nikhilweee.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzOTU5NjUwNTc=" data-category="Comments" data-category-id="DIC_kwDOF5nygc4COpdc"
+        data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top"
+        data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
+    </script>
+{{ end }}

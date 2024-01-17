@@ -1,0 +1,57 @@
+{{ "<!-- begin: layouts/partials/head.html -->" | safeHTML }}
+<head>
+
+    <meta charset="utf-8">
+    <!-- Prevent mobile browsers from zooming out -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ hugo.Generator }}
+
+    {{ if not (hasPrefix .RelPermalink "/blog") }}
+        <title>{{- .Site.Author.name -}}{{ with .Title }} - {{ . }}{{ end }}</title>
+    {{ else }}
+        <title>{{ with .Title }}{{- . }} - {{ end }}{{ .Site.Title -}}</title>
+    {{ end }}
+
+    {{- $options := (dict "TargetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) -}}
+    {{- $style := resources.Get "sass/main.scss" | resources.ToCSS $options -}}
+
+    <link rel="icon" type="image/svg" href="/static/favicon.png">
+    <link rel="stylesheet" type="text/css" href="{{- $style.RelPermalink -}}">
+    <link rel="canonical" href="{{- .Permalink -}}">
+
+    {{ if .Params.citations }}
+        <link rel="stylesheet" type="text/css" href="{{ "/hugo-cite.css" | relURL }}" />
+    {{ end }}
+
+    <!-- Alternative Formats -->
+    {{- range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` 
+        .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{- end -}}
+
+    <!-- KaTeX -->
+    {{ if .Params.katex }}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: "$$", right: "$$", display: true},
+                        {left: "$", right: "$", display: false}
+                    ],
+                    throwOnError: false,
+                    strict: false
+                });
+            });
+        </script>
+    {{ end }}
+
+    <!-- Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/charter-webfont/charter.min.css" rel="stylesheet">
+    <!-- font awesome is required for icons on the homepage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+</head>
+{{ "<!-- end: layouts/partials/head.html -->" | safeHTML }}

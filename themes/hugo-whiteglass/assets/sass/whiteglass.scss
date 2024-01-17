@@ -1,0 +1,41 @@
+// Define defaults for each variable.
+$base-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+$bold-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+$mono-font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+$base-font-weight: normal !default;
+$bold-font-weight: bold !default;
+$base-font-size:   18px !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.4 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       rgb(25, 25, 39) !default;
+$background-gray:  rgb(245, 245, 245) !default;
+$background-white: rgb(253, 253, 253) !default;
+$brand-color:      rgb(37, 104, 186) !default;
+
+$grey-color:       rgb(117, 117, 117) !default;
+$grey-color-light: lighten($grey-color, 45%) !default;
+$grey-color-dark:  darken($grey-color, 30%) !default;
+
+// Width of the content area
+$content-width:    800px !default;
+$on-palm:          600px !default;
+$on-laptop:        950px !default;
+
+
+// Mixins
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+
+// Import partials.
+@import
+  "whiteglass/base",
+  "whiteglass/layout",
+  "whiteglass/syntax"
+;

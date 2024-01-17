@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{"<!-- begin: layouts/_default/index.html -->" | safeHTML }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {{ .Content }}
+
+</article>
+{{"<!-- end: layouts/_default/index.html -->" | safeHTML }}
+{{ end }}

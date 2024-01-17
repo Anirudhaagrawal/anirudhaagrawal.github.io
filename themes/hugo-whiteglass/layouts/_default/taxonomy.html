@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{"<!-- begin: layouts/_baseof/taxonomy.html -->" | safeHTML }}
+<div class="home">
+
+  <h1 class="page-heading">{{ .Title }}</h1><hr>
+  <p>{{ .Content }}</p>
+
+  <table class="post-list">
+    {{ range .Paginator.Pages }}
+    <tr>
+      <td class="post-list-date">
+        <span>
+          {{- .Date.Format "Jan 02, 2006" -}}
+        </span>
+      </td>
+      <td class="post-list-title">
+        <a href="{{- .Permalink | relURL -}}">
+          {{- .Title -}}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td class="post-list-tags">
+        <a href="{{ relref . .Params.category }}">
+          {{- .Params.category -}}
+        </a>
+      </td>
+      <td class="post-list-subtitle">
+        {{ .Params.subtitle }}
+      </td>
+    </tr>
+    <tr class="break">
+    </tr>
+    {{ end }}
+  </table>
+  {{ partial "pagination" . }}
+  
+</div>
+{{"<!-- end: layouts/_baseof/taxonomy.html -->" | safeHTML }}
+{{ end }}

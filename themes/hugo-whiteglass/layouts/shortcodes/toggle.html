@@ -1,0 +1,6 @@
+<!-- begin: shortcodes/toggle.html -->
+<details>
+    <summary>{{ .Get 0 | markdownify }}</summary>
+    {{ .Inner | safeHTML | markdownify }}
+</details>
+<!-- end: shortcodes/toggle.html -->

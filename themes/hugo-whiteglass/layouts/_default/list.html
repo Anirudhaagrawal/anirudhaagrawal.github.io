@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{"<!-- begin: layouts/_default/list.html -->" | safeHTML }}
+<div class="home">
+
+  {{ with .Title }}
+    <h1 class="page-heading">{{ . }}</h1><hr>
+  {{ end }}
+  {{ with .Content }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  <table class="post-list">
+    {{ range .Paginator.Pages }}
+      <tr>
+        <td class="post-list-date">
+          <span>
+            {{- .Date.Format "Jan 02, 2006" -}}
+          </span>
+        </td>
+        <td class="post-list-title">
+          <a href="{{- .RelPermalink -}}">
+            {{- .Title -}}
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="post-list-tags">
+          {{ with .Params.categories }}
+            {{ range first 1 . }}
+              {{ with $.Site.GetPage ( . | urlize ) }}
+              <a href="{{- .RelPermalink -}}">
+                {{ .Title }}
+              </a>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </td>
+        <td class="post-list-subtitle">
+            {{ .Params.subtitle }}
+        </td>
+      </tr>
+      <tr class="break">
+      </tr>
+    {{ end }}
+  </table>
+  {{ partial "pagination" . }}
+
+</div>
+{{"<!-- begin: layouts/_default/list.html -->" | safeHTML }}
+{{ end }}
