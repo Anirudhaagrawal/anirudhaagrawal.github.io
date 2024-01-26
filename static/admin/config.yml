@@ -1,13 +1,13 @@
 backend:
   name: github
-  repo: Anirudhaagrawal/resume.git
+  repo: Anirudhaagrawal/anirudhaagrawal.github.io.git
   branch: main # Branch to update (optional; defaults to master)
 
 local_backend: true
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
-site_url: https://anirudhaagrawal.me
+site_url: https://anirudhaagrawal.github.io
 
 slug:
   encoding: "ascii"
