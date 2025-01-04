@@ -21,17 +21,18 @@ url = '/'
 </div>
 {{< /rawhtml >}}
 
-Hi, I am Anirudha Agrawal, Data Science master's student at University Of California San Diego. I am a teaching assistant for DSC 241 Statistical Models and am also working with [Prof. Ding](https://picassolab.squarespace.com/yufei) on optimising multiple LoRA serving on a distributed GPU setting.
+Hi, I’m a researcher currently at AMD Research, where I focus on optimizing large-scale machine learning systems by refining concurrent computation and communication on GPUs—often through techniques like offloading tasks to SDMA engines. Under the guidance of [Shaizeen Aga](https://www.shaizeen.com/), [Suchita Pati](https://pages.cs.wisc.edu/~spati/), and Mahazabeen Islam, I co-authored the paper [Optimizing ML Concurrent Computation and Communication with GPU DMA Engines](https://arxiv.org/pdf/2412.14335), bridging the gap between theoretical and real-world performance.
 
-Before UCSD, I was a Machine Learning Engineer at [Sahaj.ai](https://www.sahaj.ai/), where I gained experience in developing conversational chatbots, creating robust big data pipelines with Spark and Airflow, and managing highly available, high-traffic systems.
+Previously, I completed my Master’s in Data Science at UC San Diego, which strengthened my foundation in distributed computing and systems-level optimization. Before that, at Sahaj AI, I managed Spark clusters and Kubernetes deployments, honing my ability to scale models in fast-paced, reliability-critical environments.
 
-I graduated from [RCOEM](https://www.rknec.edu/) with a B.E in Computer Science. For more information, you can go through a list of my [projects](/projects), or have a look at my [resume](/resume). Feel free to reach out to me using your preferred platform. 
-
-
+Looking ahead, I plan to design efficient, context-rich AI architectures that integrate extended user context while remaining computationally feasible and energy-efficient. By combining systems-level optimizations, robust distributed pipelines, and hardware-aware design, I aim to turn ML breakthroughs into impactful, real-world solutions at scale.
 
 
 ## Open Source
 ---
+{{<spanright>}}[[GitHub]](https://github.com/Anirudhaagrawal/mlsys-reading-list){{</spanright>}}
+Systems For ML Reading List
+
 {{<spanright>}}[[GitHub]](https://github.com/Anirudhaagrawal/cifar-100-classification.git){{</spanright>}}
 Academic project for Cifar-100 classification.  
 
@@ -50,4 +51,7 @@ MNIST classfication from Scratch.
                name="Sahaj AI" desc="2020-2022">}}
 {{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/" 
                name="University Of California San Diego" desc="2022 - Present">}}
+{{<affiliation img="https://i.imgur.com/j92MKtV.png" href="https://ucsd.edu/" 
+               name="AMD Research" desc="2022 - Present">}}
+               
 {{</centerwrap>}}
