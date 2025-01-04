@@ -51,7 +51,7 @@ MNIST classfication from Scratch.
                name="Sahaj AI" desc="2020-2022">}}
 {{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/" 
                name="University Of California San Diego" desc="2022 - Present">}}
-{{<affiliation img="https://i.imgur.com/j92MKtV.png" href="https://ucsd.edu/" 
+{{<affiliation img="https://i.imgur.com/rCuEUVC.png" href="https://ucsd.edu/" 
                name="AMD Research" desc="2022 - Present">}}
                
 {{</centerwrap>}}
