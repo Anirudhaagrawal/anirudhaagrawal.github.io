@@ -45,15 +45,15 @@ MNIST classfication from Scratch.
 ## Affiliations
 ---
 {{<centerwrap>}}
-{{<affiliation img="https://i.imgur.com/op6GjLu.png" href="http://www.rknec.edu/"
-               name="RCOEM" desc="2016-2020">}}
-{{<affiliation img="https://i.imgur.com/840MsOJ.png" href="https://sahaj.ai"
-               name="Sahaj AI" desc="2020-2022">}}
-{{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/"
-               name="University Of California San Diego" desc="2022 - 2024">}}
-{{<affiliation img="https://i.imgur.com/rCuEUVC.png" href="https://www.amd.com/"
-               name="AMD Research" desc="2024 - 2025">}}
 {{<affiliation img="/images/gatech_logo.png" href="https://gatech.edu/"
                name="Georgia Institute of Technology" desc="2025 - Present">}}
+{{<affiliation img="https://i.imgur.com/rCuEUVC.png" href="https://www.amd.com/"
+               name="AMD Research" desc="2024 - 2025">}}
+{{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/"
+               name="University Of California San Diego" desc="2022 - 2024">}}
+{{<affiliation img="https://i.imgur.com/840MsOJ.png" href="https://sahaj.ai"
+               name="Sahaj AI" desc="2020-2022">}}
+{{<affiliation img="https://i.imgur.com/op6GjLu.png" href="http://www.rknec.edu/"
+               name="RCOEM" desc="2016-2020">}}
 
 {{</centerwrap>}}
