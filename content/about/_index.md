@@ -21,11 +21,11 @@ url = '/'
 </div>
 {{< /rawhtml >}}
 
-Hi, I’m a researcher currently at AMD Research, where I focus on optimizing large-scale machine learning systems by refining concurrent computation and communication on GPUs—often through techniques like offloading tasks to SDMA engines. Under the guidance of [Shaizeen Aga](https://www.shaizeen.com/), [Suchita Pati](https://pages.cs.wisc.edu/~spati/), and Mahazabeen Islam, I co-authored the paper [Optimizing ML Concurrent Computation and Communication with GPU DMA Engines](https://arxiv.org/pdf/2412.14335), bridging the gap between theoretical and real-world performance.
+Hi, I'm a PhD student in Computer Science at Georgia Tech ([SAIL Lab](https://gatech-sysml.github.io/)), advised by [Prof. Alexey Tumanov](https://www.cc.gatech.edu/people/alexey-tumanov). My research focuses on efficient LLM serving, communication/computation overlap, and hardware-aware scheduling across NVIDIA and AMD stacks. I'm also building [Project Vajra](https://project-vajra.github.io/), a next-gen AI inference system aimed at practical, scalable, and energy-aware deployment. I'll be a GTA for ML-Sys this semester.
 
-Previously, I completed my Master’s in Data Science at UC San Diego, which strengthened my foundation in distributed computing and systems-level optimization. Before that, at Sahaj AI, I managed Spark clusters and Kubernetes deployments, honing my ability to scale models in fast-paced, reliability-critical environments.
+Previously at AMD Research, I co-authored the paper [Optimizing ML Concurrent Computation and Communication with GPU DMA Engines](https://arxiv.org/pdf/2412.14335), working under the guidance of [Shaizeen Aga](https://www.shaizeen.com/), [Suchita Pati](https://pages.cs.wisc.edu/~spati/), and Mahazabeen Islam. This work leveraged GPU SDMA engines to accelerate concurrent computation-communication, translating theory into measurable throughput gains.
 
-Looking ahead, I plan to design efficient, context-rich AI architectures that integrate extended user context while remaining computationally feasible and energy-efficient. By combining systems-level optimizations, robust distributed pipelines, and hardware-aware design, I aim to turn ML breakthroughs into impactful, real-world solutions at scale.
+Before that, I completed my Master's in Data Science at UC San Diego and operated Spark/Kubernetes infrastructure at Sahaj AI, honing my ability to scale models in fast-paced, reliability-critical environments. Through systems-level optimizations, robust distributed pipelines, and hardware-aware design, I aim to turn ML breakthroughs into impactful, real-world solutions at scale.
 
 
 ## Open Source
@@ -45,13 +45,15 @@ MNIST classfication from Scratch.
 ## Affiliations
 ---
 {{<centerwrap>}}
-{{<affiliation img="https://i.imgur.com/op6GjLu.png" href="http://www.rknec.edu/" 
+{{<affiliation img="https://i.imgur.com/op6GjLu.png" href="http://www.rknec.edu/"
                name="RCOEM" desc="2016-2020">}}
-{{<affiliation img="https://i.imgur.com/840MsOJ.png" href="https://sahaj.ai" 
+{{<affiliation img="https://i.imgur.com/840MsOJ.png" href="https://sahaj.ai"
                name="Sahaj AI" desc="2020-2022">}}
-{{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/" 
+{{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/"
                name="University Of California San Diego" desc="2022 - 2024">}}
-{{<affiliation img="https://i.imgur.com/rCuEUVC.png" href="https://ucsd.edu/" 
-               name="AMD Research" desc="2024 - Present">}}
-               
+{{<affiliation img="https://i.imgur.com/rCuEUVC.png" href="https://www.amd.com/"
+               name="AMD Research" desc="2024">}}
+{{<affiliation img="/images/gatech_logo.png" href="https://gatech.edu/"
+               name="Georgia Institute of Technology" desc="2024 - Present">}}
+
 {{</centerwrap>}}
