@@ -21,7 +21,7 @@ url = '/'
 </div>
 {{< /rawhtml >}}
 
-Hi, I'm a PhD student in Computer Science at Georgia Tech ([SAIL Lab](https://gatech-sysml.github.io/)), advised by [Prof. Alexey Tumanov](https://www.cc.gatech.edu/people/alexey-tumanov). My research focuses on efficient LLM serving, communication/computation overlap, and hardware-aware scheduling across NVIDIA and AMD stacks. I'm also building [Project Vajra](https://project-vajra.github.io/), a next-gen AI inference system aimed at practical, scalable, and energy-aware deployment. I'll be a GTA for ML-Sys this semester.
+Hi, I'm a PhD student in Computer Science at Georgia Tech ([SAIL Lab](https://gatech-sysml.github.io/)), advised by [Prof. Alexey Tumanov](https://gatech-sysml.github.io/members/alexey-tumanov.html). My research focuses on efficient LLM serving, communication/computation overlap, and hardware-aware scheduling across NVIDIA and AMD stacks. I'm also building [Project Vajra](https://project-vajra.github.io/), a next-gen AI inference system aimed at practical, scalable, and energy-aware deployment. I'll be a GTA for ML-Sys this semester.
 
 Previously at AMD Research, I co-authored the paper [Optimizing ML Concurrent Computation and Communication with GPU DMA Engines](https://arxiv.org/pdf/2412.14335), working under the guidance of [Shaizeen Aga](https://www.shaizeen.com/), [Suchita Pati](https://pages.cs.wisc.edu/~spati/), and Mahazabeen Islam. This work leveraged GPU SDMA engines to accelerate concurrent computation-communication, translating theory into measurable throughput gains.
 
