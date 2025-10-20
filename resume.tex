@@ -1,0 +1,199 @@
+%------------------------
+% Resume Template
+% Author : Anirudha Agrawal
+% Github : https://github.com/Anirudhaagrawal
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{xfakebold}
+
+\newcommand{\fbseries}{\unskip\setBold\aftergroup\unsetBold\aftergroup\ignorespaces}
+\makeatletter
+\newcommand{\setBoldness}[1]{\def\fake@bold{#1}}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+  \textbf{{\LARGE Anirudha Agrawal}} & Email: \href{mailto:anirudha0807@gmail.com}{anirudha0807@gmail.com}\\
+  \href{https://anirudhaagrawal.github.io/}{Website: anirudhaagrawal.github.io} & Mobile: +1-858-319-7044 \\
+  \href{https://github.com/Anirudhaagrawal}{Github:~ github.com/Anirudhaagrawal }
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, USA}
+      {Doctor of Philosophy - Computer Science (Advisor: Prof. Alexey Tumanov)}{Aug 2025 - Present}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research Focus:} Efficient LLM serving, communication/computation overlap, hardware-aware scheduling across NVIDIA and AMD stacks}}}
+    \resumeSubheading
+      {University of California San Diego}{San Diego, USA}
+      {Master of Science - Data Science - GPA: 3.9}{Sept 2022 - June 2024}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Relevant Courses:} ML Systems (Prof. Hao Zhang), Parallel Programming (Prof. Bryan Chin), Data Systems For ML (Prof. Arun Kumar),  Operating Systems (Prof. Amy Ousterhout), Deep Learning (Prof. Garrison Cottrell), Advanced Data Mining (Prof. Zhiting Hu), Statistical Models (Prof. Armin Schwartzman)}}}
+    \resumeSubheading
+      {Ramdeobaba College of Engineering and Management}{Nagpur, India}
+      {Bachelor of Engineering - Computer Science}{Aug 2016 - July 2020}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Selected Courses:} Operating Systems, Computer Architecture, Data Structures, Analysis Of Algorithms, Databases, Artificial Intelligence, Machine Learning, Networking}}}
+    \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubheading{ConCCL: Optimizing ML Concurrent Computation
+and Communication with GPU DMA Engines}{}
+      {Anirudha Agrawal, Shaizeen Aga, Mahzabeen Islam, Suchita Pati}{}
+      \resumeItemListStart
+              \resumeItem{\href{https://arxiv.org/pdf/2412.14335}{Submitted}{}}{Top-tier conference}
+               \resumeItemListEnd
+        \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Graduate Teaching Assistant}{}
+      {Georgia Institute of Technology}{Aug 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{ML Systems Course}}{Serving as a GTA for the ML Systems course, assisting with course management, grading, and student support.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Research Intern}{}
+      {AMD Research and Development}{Jul 2024 - May 2025}
+      \resumeItemListStart
+              \resumeItem{\textbf{Computation-Communication Overlap Optimization}}{Developed a prototype leveraging DMA engines for collective communication, achieving up to 1.7× speedup over RCCL through reduced latencies and protocol overheads. Optimized concurrent computation and communication (C3) in GPU-based ML workloads by implementing strategies like scheduler prioritization and resource partitioning, increasing realized roofline speedup from 21\% to 48\% for cu-based collective overlap. Demonstrated that overlapping SDMA collectives with GEMM kernels instead of cu-based collectives further enhances performance, realizing up to 72\% of the available roofline speedup.}
+        \resumeItem{\textbf{Performance Benchmarking of Communication Libraries}}{Developed a microbenchmark to compare collective communication libraries like MSCCL++ and NCCL, providing insights into their performance differences.}
+
+      \resumeItemListEnd
+
+
+    \resumeSubheading{Machine Learning Engineer}{}
+      {Sahaj AI}{Jan 2020 -- Aug 2022}
+      \resumeItemListStart
+        \resumeItem{\textbf{Outdoor Ad Visibility Optimization}}{Engineered a location-based algorithm that increased outdoor advertising visibility by \textbf{40\%}. Deployed Spark clusters on Amazon EMR orchestrated with Airflow to process \textbf{1.5 TB} of data daily.}
+        \resumeItem{\textbf{Customer Support Chatbot Development}}{Developed and deployed a chatbot recognizing over \textbf{97} intents using DIET and spaCy. Utilized Kubernetes for deployment and managed data pipelines with Kafka and PostgreSQL, achieving an \textbf{80\%} reduction in customer care response times.}
+        \resumeItem{\textbf{Real-Time Telemetric Data Services for TATA Motors}}{Developed real-time telemetric data services by designing and deploying microservices on Kubernetes. Leveraged Kafka and Cassandra for data management, providing analytics for vehicles across India.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Academic Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Project Vajra - Next-Gen AI Inference System}{Building a next-generation AI inference system aimed at practical, scalable, and energy-aware deployment. (\href{https://project-vajra.github.io/}{project-vajra.github.io})}
+\resumeSubItem{Tesla T4 GPU GEMM Optimization with CUDA}{Developed CUDA kernels in C++ for GEMM operations on Tesla T4 GPUs, achieving \textbf{\textit{78\%}} of CuBLAS's peak performance.}
+\resumeSubItem{ARM CPU GEMM Optimization Using SVE}{Developed kernels using SVE instructions to optimize GEMM operations on ARM CPUs, which support vectorized computations. Achieved performance on par with the blislab standard for GEMM kernels.}
+\resumeSubItem{Image Captioning with PyTorch and ResNet-50}{Created a PyTorch-based image captioning model utilizing pretrained ResNet-50, complemented with LSTM.}
+\resumeSubItem{Traffic Violation Detection Using YOLO and OCR}{Developed a traffic monitoring system that uses YOLO for object detection and OCR for text recognition, enhancing enforcement of helmet compliance, vehicle counting, and identification of violators' registration numbers at traffic signals.}
+\resumeSubItem{ResNet-18 Based Image Segmentation}{Engineered a PyTorch image segmentation model using a ResNet-18.}
+\vspace{2pt}
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+
+
+
+%-----------Teaching Experience-----------------
+\section{Teaching Experience}
+\resumeSubHeadingListStart
+\vspace{2pt}
+\resumeSubItem{Graduate Teaching Assistant - ML Systems - Fall 2025} {Serving as a GTA for the ML Systems course at Georgia Institute of Technology, assisting with course management, grading, and student support.}
+\vspace{2pt}
+\resumeSubItem{Teaching Assistant - Statistical Models - Fall 2023 \& Winter 2024} {Managed and conducted review lectures, led lab sessions, designed and graded exams/assignments, and addressed student inquiries in this course, receiving high commendation from the professor.}
+\vspace{2pt}
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+%-----------Awards-----------------
+\section{Honors and Awards}
+\resumeSubHeadingListStart
+
+\resumeSubItem{Award for Academic Excellence at UCSD}{Earned this award for outstanding performance in my coursework at UCSD.}
+\vspace{2pt}
+\resumeSubItem{Best Teaching Assistant Award at UCSD}{Awarded for my contributions as a teaching assistant for the graduate course on statistical models.}
+\vspace{2pt}
+\resumeSubItem{Smart India Hackathon Winner}{Won the National Hackathon organized by the MHRD, competing against over \textbf{\textit{200,000}} participants.}
+\vspace{2pt}
+
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+\end{document}

@@ -52,8 +52,8 @@ MNIST classfication from Scratch.
 {{<affiliation img="https://i.imgur.com/2T7RicR.png" href="https://ucsd.edu/"
                name="University Of California San Diego" desc="2022 - 2024">}}
 {{<affiliation img="https://i.imgur.com/rCuEUVC.png" href="https://www.amd.com/"
-               name="AMD Research" desc="2024">}}
+               name="AMD Research" desc="2024 - 2025">}}
 {{<affiliation img="/images/gatech_logo.png" href="https://gatech.edu/"
-               name="Georgia Institute of Technology" desc="2024 - Present">}}
+               name="Georgia Institute of Technology" desc="2025 - Present">}}
 
 {{</centerwrap>}}
